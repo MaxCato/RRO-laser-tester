@@ -24,8 +24,9 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build Debug APK
         run: ./gradlew app:assembleDebug --no-daemon
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: debug-apk
-          path: app/build/outputs/apk/debug/app-debug.apk
+     
+  - name: Upload APK artifact
+    uses: actions/upload-artifact@v3
+    with:
+      name: debug-apk
+      path: app/build/outputs/apk/debug/app-debug.apk
