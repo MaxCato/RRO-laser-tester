@@ -1,0 +1,38 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.rrolasertester'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.example.rrolasertester"
+        minSdk 23
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+    buildFeatures { compose true }
+    composeOptions { kotlinCompilerExtensionVersion '1.4.3' }
+    kotlinOptions { jvmTarget = '1.8' }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.compose.ui:ui:1.4.3'
+    implementation 'androidx.compose.material:material:1.4.3'
+    implementation 'androidx.compose.ui:ui-tooling-preview:1.4.3'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.activity:activity-compose:1.7.1'
+
+    // libreria RS-485 da Maven Central
+    implementation 'com.hoho:usb-serial-for-android:3.4.7'
+    implementation 'com.github.PhilJay:MPAndroidChart:3.1.0'
+    implementation 'com.itextpdf:itextpdf:5.5.13.3'
+}
